@@ -3,6 +3,10 @@
 ## Introduction
 This is the backend API for the Task Management application. It provides RESTful endpoints for managing tasks, users, and authentication.
 
+## Api Documentation
+
+[Documentation](https://documenter.getpostman.com/view/19675500/2sAYdoE7HH#9224c6ef-df46-42a9-ac57-bd8cfbf313a1)
+
 ## Features
 - User Authentication (JWT-based)
 - Task Creation, Updating, and Deletion
