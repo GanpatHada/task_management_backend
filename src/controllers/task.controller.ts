@@ -51,7 +51,7 @@ export const deleteTask=asyncHandler(async(req:AuthRequest,res:Response)=>{
        if (result.rowCount === 0) {
         throw new ApiError(400,'Task not found')
     }
-       return res.status(201).json(new ApiResponse(200,{taksId:result.rows[0].id},"task deleted successfully"))
+       return res.status(201).json(new ApiResponse(200,{taskId:result.rows[0].id},"task deleted successfully"))
     } catch (error) {
         throw new ApiError(500,"unable to delete task") 
     }
