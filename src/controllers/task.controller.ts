@@ -13,7 +13,7 @@ export const getAllTasks=asyncHandler(async(req:AuthRequest,res:Response)=>{
     const user_id=req.user?.id;
     try {
         const result = await pool.query(
-            "SELECT * FROM tasks WHERE user_id = $1 ORDER BY due_date ASC",
+            "SELECT * FROM tasks WHERE user_id = $1 ORDER BY created_at DESC",
             [user_id]
         );
         return res.status(200).json(new ApiResponse(200,{tasks:result.rows},"tasks fetched successfully"))
